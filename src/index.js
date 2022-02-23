@@ -3,10 +3,10 @@ import ReactDom from "react-dom";
 
 const App = () => {
   return (
-    <div>
+    <React.Fragment>
       <h1>Hello!!</h1>
       <p>World!!</p>
-    </div>
+    </React.Fragment>
   );
 };
 
