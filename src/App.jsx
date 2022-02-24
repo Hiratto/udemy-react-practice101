@@ -1,13 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import ColorfulMessage from "./components/ColorfulMessage";
 
 const App = () => {
-  const onClickButton = () => alert();
-  const contentStyle = {
-    color: "red",
-    // CSSではfont-sizeだが、JSではキャメルケースで書くこと
-    fontSize: "18px"
+  const onClickCountUp = () => {
+    setNum(num + 1);
   };
+  const [num, setNum] = useState(0);
   return (
     <>
       {/* 外側の{}はJS、内側はオブジェクトとして */}
@@ -15,7 +13,8 @@ const App = () => {
       <h1 style={{ color: "red" }}>Hello!!</h1>
       <ColorfulMessage color="blue">World!!</ColorfulMessage>
       <ColorfulMessage color="pink">Japan!!!!!!</ColorfulMessage>
-      <button onClick={onClickButton}>ボタン</button>
+      <button onClick={onClickCountUp}>カウントアップ</button>
+      <p>{num}</p>
     </>
   );
 };
